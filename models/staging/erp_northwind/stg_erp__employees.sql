@@ -17,4 +17,7 @@ with
         from {{ source('erp', 'employees') }}
     )
 
-select * from source_employees
+select
+    *
+from
+    source_employees
