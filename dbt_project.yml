@@ -32,8 +32,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  dbt_northwind:
+
+    staging:
+      +materialized: view
+      +schema: stg
+    
+    marts:
+      +materialized: table
+      +schema: marts
+
 
 seeds:
-  dbt_northwind:
-    erp_northwind:
-      +schema: erp_northwind
+  erp_northwind:
+    +schema: erp_northwind

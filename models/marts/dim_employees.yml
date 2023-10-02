@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: Dimensão de funcionarios da Northwind
+    columns:
+      - name: funcionario_id
+        description: chave primaria da tabela funcionarios
+        tests:
+          - unique
+          - not_null
+
+      - name: gerente_id
+        description: blabla
+
+      - name: sobrenome
+        description: blabla
+
+      - name: nome
+        description: blabla
+
+      - name: nome_completo
+        description: blabla
+
+      - name: nome_completo as gerente_nome_completo
+        description: blabla
+
+      - name: data_nascimento
+        description: blabla
+
+      - name: data_contratacao
+        description: blabla
+
+      - name: endereco
+        description: blabla
+
+      - name: cidade
+        description: blabla
+
+      - name: regiao
+        description: blabla
+
+      - name: cep
+        description: blabla
+
+      - name: pais
+        description: blabla
+
+      - name: notas
+        description: blabla
