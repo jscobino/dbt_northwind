@@ -2,6 +2,7 @@ with
     source_employees as(
         select
             cast(employee_id as int) as funcionario_id
+            , cast(reports_to as int) as gerente_id
             , cast(last_name as string) as sobrenome
             , cast(first_name as string) as nome
             , cast(first_name || ' ' || last_name as string) as nome_completo
@@ -13,7 +14,6 @@ with
             , postal_code as cep
             , country as pais
             , notes as notas
-            , reports_to as gerente_id
         from {{ source('erp', 'employees') }}
     )
 
